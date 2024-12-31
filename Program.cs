@@ -6,6 +6,10 @@ using System.Reflection;
 namespace LuminaryEmu {
     internal class Program {
         private static void Main(string[] args) {
+            if (args is null) {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             Tools.Log("LuminaryEmu For Luminary Version 357!");
             new Program().StartServer();
         }
@@ -14,7 +18,7 @@ namespace LuminaryEmu {
             new World().Start();
             _ = Console.ReadLine();
         }
-        x
+        
     }
 
     public class World {

@@ -1,4 +1,5 @@
 ﻿using LuminaryEmu.LoginPackets;
+using PacketEnc;
 using System;
 using System.Net.Sockets;
 
@@ -89,7 +90,7 @@ namespace LuminaryEmu {
             Packet p = new Packet(1000 * World.GameServersNum);
 
             p.AddByte(0);
-            p.AddHeader(SendLSOps.ServerInfo);
+            p.AddHeader((Packet.SendLSOps)SendLSOps.ServerInfo);
             p.AddInt16(World.GameServersNum);
 
             for (short i = 1; i < World.GameServersNum + 1; i++) {
@@ -134,7 +135,7 @@ namespace LuminaryEmu {
         private void SendUserInfoOK() {
             Packet packet = new Packet(200);
             packet.AddByte(0xCC);
-            packet.AddHeader(SendLSOps.UserInfoOK);
+            packet.AddHeader((Packet.SendLSOps)SendLSOps.UserInfoOK);
             packet.AddInt16(0);
             packet.AddInt32(0);
             packet.AddString(LoginUser.UserName, 11);
