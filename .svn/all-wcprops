@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/luminaryemulator/!svn/ver/23/luminaryemulator
+END
+LuminaryEmu.sln
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/luminaryemulator/!svn/ver/14/luminaryemulator/LuminaryEmu.sln
+END
+Config.ini
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/luminaryemulator/!svn/ver/14/luminaryemulator/Config.ini
+END
+LuminaryEmu.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/luminaryemulator/!svn/ver/21/luminaryemulator/LuminaryEmu.csproj
+END
+MySql.Data.dll
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/luminaryemulator/!svn/ver/14/luminaryemulator/MySql.Data.dll
+END
+PacketEnc.dll
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/luminaryemulator/!svn/ver/21/luminaryemulator/PacketEnc.dll
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/luminaryemulator/!svn/ver/21/luminaryemulator/Program.cs
+END
+LuminaryDatCryptor.exe
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/luminaryemulator/!svn/ver/15/luminaryemulator/LuminaryDatCryptor.exe
+END
+LuminaryEmu.suo
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/luminaryemulator/!svn/ver/21/luminaryemulator/LuminaryEmu.suo
+END

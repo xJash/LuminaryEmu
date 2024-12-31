@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LuminaryEmu.LoginProtocol">
+    <Position X="8.75" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAQAAEAAAAAAAAAgAAAgAAQAAARgAAAEAAAgAAAk=</HashCode>
+      <FileName>LoginServer\LoginProtocol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="LoginUser" />
+      <Field Name="LoginServer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LuminaryEmu.LoginServer">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAgAAAAAAAAAAAAAIAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>LoginServer\LoginServer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="UserList" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LuminaryEmu.LoginUser">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAAAAAIAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>LoginServer\LoginUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LuminaryEmu.World">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <AssociationLine Name="LoginUsers" Type="System.Collections.Generic.List&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="2.433" />
+        <Point X="5.719" Y="2.433" />
+        <Point X="5.719" Y="3.438" />
+        <Point X="3.25" Y="3.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="GameServers" Type="System.Collections.Generic.List&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="2.886" />
+        <Point X="5.719" Y="2.886" />
+        <Point X="5.719" Y="3.974" />
+        <Point X="5.568" Y="3.974" Type="JumpStart" />
+        <Point X="5.401" Y="3.974" Type="JumpEnd" />
+        <Point X="3.188" Y="3.974" />
+        <Point X="3.188" Y="3.759" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ApAACAAgACAAIAAAAgBAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="iniReader" />
+      <Field Name="LoginUsers" />
+      <Field Name="LoginServer" />
+      <Field Name="GameServers" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LuminaryEmu.GameServer" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAASAAAgAIAgAAAAQACgAYAAAAAAAAAQEAAAA=</HashCode>
+      <FileName>GameServer\GameServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LuminaryEmu.IniFile" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAgAAAAAAACAAACAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\ini.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="LuminaryEmu.LoginPackets.SendLSOps">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\PacketOps.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LuminaryEmu.LoginPackets.RecvLSOps">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Tools\PacketOps.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

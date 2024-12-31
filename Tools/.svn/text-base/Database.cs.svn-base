@@ -1,0 +1,93 @@
+﻿/*
+    Luminary Emulator
+    Copyright (C) 2009 The Dev Team:
+ 
+    <CioNide> Riley McGowen <cionide@live.com>
+    <Mintee> Robby Unruh <Anonymous>
+    <Evil Mortal> Vova nikishenko <evil_mortal@hotmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MySql.Data.MySqlClient;
+using System.Data;
+using LuminaryEmu;
+
+namespace LuminaryEmu
+{
+    class Database
+    {
+        public static MySqlConnection dbcon;
+        public static object locker;
+
+        public static void Initialize()
+        {
+            locker = new object();
+
+            string server = "localhost"; // MySQL Host IP
+            string database = "luminary"; // MySQL Database
+            string user = "root"; // MySQL Login Username
+            string password = "root"; // MySQL Login Password
+
+            string connectionString =
+            "Server=" + server + ";" +
+            "Database=" + database + ";" +
+            "User ID=" + user + ";" +
+            "Password=" + password + ";" +
+            "Pooling=false";
+
+            dbcon = new MySqlConnection(connectionString);
+            dbcon.Open();
+            Tools.Log("Connected to database - " + database);
+        }
+
+        public static IDataReader Read(string query)
+        {
+            IDataReader reader;
+            lock (locker)
+            {
+                IDbCommand cmd = dbcon.CreateCommand();
+                cmd.CommandText = query;
+                reader = cmd.ExecuteReader();
+                cmd.Dispose();
+                cmd = null;
+            }
+            return reader;
+        }
+
+        public static int Query(string query)
+        {
+            int result = 0;
+            lock (locker)
+            {
+                IDbCommand cmd = dbcon.CreateCommand();
+                cmd.CommandText = query;
+                result = cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                cmd = null;
+            }
+            return result;
+        }
+
+        public static void Close()
+        {
+            dbcon.Close();
+            Console.WriteLine("Database connection closed.");
+        }
+    }
+}

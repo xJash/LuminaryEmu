@@ -1,0 +1,59 @@
+﻿/*
+    Luminary Emulator
+    Copyright (C) 2009 The Dev Team:
+ 
+    <CioNide> Riley McGowen <cionide@live.com>
+    <Mintee> Robby Unruh <Anonymous>
+    <Evil Mortal> Vova nikishenko <evil_mortal@hotmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LuminaryEmu
+{
+    public class Tools
+    {
+        public static void Log(string msg)
+        {
+            string date = "[";
+            int hour = System.DateTime.Now.Hour;
+            int minute = System.DateTime.Now.Minute;
+            int second = System.DateTime.Now.Second;
+
+            if (hour > 9)
+                date += hour.ToString() + ":";
+            else
+                date += "0" + hour.ToString() + ":";
+
+            if (minute > 9)
+                date += minute.ToString() + ":";
+            else
+                date += "0" + minute.ToString() + ":";
+
+            if (second > 9)
+                date += second.ToString() + "] ";
+            else
+                date += "0" + second.ToString() + "] ";
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(date);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(msg);
+        }
+    }
+}

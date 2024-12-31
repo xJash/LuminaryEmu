@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/luminaryemulator/!svn/ver/16/luminaryemulator/LoginServer
+END
+LoginDiagram.cd
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/luminaryemulator/!svn/ver/14/luminaryemulator/LoginServer/LoginDiagram.cd
+END
+LoginServer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/luminaryemulator/!svn/ver/16/luminaryemulator/LoginServer/LoginServer.cs
+END
+LoginUser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/luminaryemulator/!svn/ver/14/luminaryemulator/LoginServer/LoginUser.cs
+END
+LoginProtocol.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/luminaryemulator/!svn/ver/16/luminaryemulator/LoginServer/LoginProtocol.cs
+END

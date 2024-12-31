@@ -1,0 +1,31 @@
+[Config]
+LocalIP = 127.0.0.1
+WANIP = 127.0.0.1
+GameServerNumber = 2
+[World:0]
+Port = 1234
+Name = TestServer
+GoonzuName = TesterX
+InfoText = Welcome to test server :D
+Prices = 50
+Population = 50
+Bonus = 50
+Icon = 1
+[World:1]
+Port = 1235
+Name = TestServer2
+GoonzuName = TesterX2
+InfoText = Welcome to test server :D
+Prices = 1
+Population = 1
+Bonus = 1
+Icon = 1
+[World:2]
+Port = 1236
+Name = TestServer
+GoonzuName = TesterX
+InfoText = Welcome to test server :D
+Prices = 50
+Population = 50
+Bonus = 50
+Icon = 1
